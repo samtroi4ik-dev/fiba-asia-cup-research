@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Who Wins in Asian Basketball? FIBA Asia Cup Research</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f6f3ee;--card:#fff;--ink:#101a2c;--mut:#5d6677;--line:#d9d4ca;--acc:#e8591a;--navy:#0c1a33;--on:#fff;color-scheme:light}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1424;--card:#12223b;--ink:#eef2f9;--mut:#9eacc2;--line:#27395a;--acc:#ff7a3d;--navy:#050d1a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a1424;--card:#12223b;--ink:#eef2f9;--mut:#9eacc2;--line:#27395a;--acc:#ff7a3d;--navy:#050d1a;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.1;margin:0;font-weight:700}
+em{font-style:italic;color:var(--acc)}
+.w{max-width:960px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--navy);color:#fff}
+header.top .w{display:flex;align-items:center;gap:18px;height:60px}
+.logo{font:700 20px Georgia,serif;letter-spacing:.02em;margin-right:auto;color:#fff;text-decoration:none}
+header nav{display:flex;gap:16px;overflow-x:auto}
+header nav a{color:#c3d0e6;text-decoration:none;font-size:15px;white-space:nowrap}
+header nav a:hover{color:#fff}
+.btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:999px}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.hero{background:var(--navy);color:#fff;padding:56px 0 64px;overflow:hidden}
+.hero .w{display:grid;gap:28px;grid-template-columns:1.15fr .85fr;align-items:center}
+.eyebrow{color:#9fb2d2;font-size:14px;margin:0 0 14px}
+.hero h1{font-size:clamp(38px,7vw,64px)}
+.hero p.s{color:#c3d0e6;max-width:44ch;margin:18px 0 26px}
+.hero svg{width:100%;height:auto}
+@media(max-width:700px){.hero .w{grid-template-columns:1fr}}
+section.sec{padding:64px 0;border-bottom:1px solid var(--line)}
+.num{color:var(--acc);font-weight:700;font-size:15px;margin:0 0 10px}
+h2{font-size:clamp(28px,5vw,42px);margin-bottom:14px}
+.lead{color:var(--mut);max-width:60ch;margin:0 0 26px}
+.fig{display:block;width:100%;height:auto;border-radius:14px;margin-top:8px}
+.stats{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.stat b{display:block;font:700 54px/1 Georgia,serif;color:var(--acc)}
+.stat span{display:block;margin:8px 0 6px}
+.stat small,.mut{color:var(--mut);font-size:14px}
+a{color:var(--acc)}
+.feat{display:grid;gap:22px 28px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.feat div{border-top:2px solid var(--ink);padding-top:12px}
+.feat i{font:italic 700 22px Georgia,serif;color:var(--acc)}
+.feat h3{font-size:22px;margin:4px 0 8px}.feat p{margin:0;color:var(--mut)}
+.tl{display:grid;grid-template-columns:repeat(auto-fill,minmax(50px,1fr));gap:5px;margin:16px 0}
+.tile{border:0;border-radius:7px;color:#fff;font:700 12px system-ui;padding:9px 0 7px;cursor:pointer}
+.tile small{display:block;font-weight:500;font-size:11px;opacity:.92}
+.tile[aria-pressed="true"]{outline:3px solid var(--ink);outline-offset:1px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--mut)}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px}
+.detail{margin:10px 0 28px;padding:14px 16px;border-radius:12px;background:var(--card);border:1px solid var(--line);min-height:3.4em}
+.bar{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:15px}
+.bar b{width:96px;flex:none}.bar div{flex:1;background:var(--line);border-radius:6px;height:22px;overflow:hidden}
+.bar span{display:block;height:100%;width:0;transition:width .8s}.bar em{width:44px;text-align:right;font-style:normal;font-weight:700;color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin-top:18px;font-size:15px;background:var(--card);border-radius:12px;overflow:hidden}
+.scroll{overflow-x:auto}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line)}th{background:var(--navy);color:#fff}
+.era{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 15px;font:600 14px system-ui;cursor:pointer;margin:0 6px 8px 0}
+.era[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
+.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{font-size:21px;margin:6px 0 2px}.card p{margin:8px 0 0}
+.av{width:72px;height:72px;border-radius:50%;background:var(--navy);overflow:hidden;display:block}
+.court{width:100%;height:auto;border-radius:14px}
+.cta{background:var(--navy);color:#fff;text-align:center;padding:64px 0}
+.cta p{color:#c3d0e6;margin:12px auto 24px;max-width:46ch}
+footer{background:var(--navy);color:#9fb2d2;padding:34px 0 44px;font-size:14px}
+footer a{color:#c3d0e6}footer ul{padding-left:18px;margin:10px 0 0}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar span{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="ball" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#e8591a"/><g fill="none" stroke="#0c1a33" stroke-width="3"><path d="M4 50h92M50 4v92"/><path d="M17 17q33 33 0 66M83 17q-33 33 0 66"/></g></symbol>
+<symbol id="court" viewBox="0 0 280 150"><rect width="280" height="150" fill="#c98c4d"/><g fill="none" stroke="#fff" stroke-width="1.6"><rect x="4" y="4" width="272" height="142"/><path d="M140 4v142"/><circle cx="140" cy="75" r="19"/><rect x="4" y="50" width="56" height="50"/><rect x="220" y="50" width="56" height="50"/><path d="M4 22Q104 75 4 128M276 22Q176 75 276 128"/><circle cx="60" cy="75" r="14"/><circle cx="220" cy="75" r="14"/></g><circle cx="14" cy="75" r="3.5" fill="#e8591a"/><circle cx="266" cy="75" r="3.5" fill="#e8591a"/></symbol>
+<symbol id="hoop" viewBox="0 0 200 200"><rect x="40" y="14" width="120" height="78" rx="6" fill="#fff" opacity=".92"/><rect x="76" y="44" width="48" height="36" fill="none" stroke="#e8591a" stroke-width="4"/><ellipse cx="100" cy="104" rx="30" ry="8" fill="none" stroke="#e8591a" stroke-width="5"/><g stroke="#fff" stroke-width="2" fill="none" opacity=".85"><path d="M72 106l10 52M86 110l6 52M100 111v52M114 110l-6 52M128 106l-10 52"/><path d="M76 124h48M80 142h40"/></g></symbol>
+<symbol id="av" viewBox="0 0 60 60"><circle cx="30" cy="22" r="10" fill="#d9bfa6"/><path d="M8 60c2-18 12-24 22-24s20 6 22 24z" fill="currentColor"/></symbol>
+</svg>
+
+<header class="top"><div class="w"><a class="logo" href="#top">ASIA CUP RESEARCH</a>
+<nav aria-label="Sections"><a href="#about">About</a><a href="#scale">Scale</a><a href="#findings">Findings</a><a href="#champions">Champions</a><a href="#courts">Courts</a><a href="#players">Players</a></nav></div></header>
+
+<div class="hero" id="top"><div class="w"><div>
+<p class="eyebrow">Mini research project · FIBA Asia Cup · 1960–2025</p>
+<h1>Asian basketball is won by <em>few teams.</em></h1>
+<p class="s">We measure how concentrated the titles are and test whether adding Oceania in 2017 changed the balance.</p>
+<a class="btn" href="#champions">See the data →</a>
+<p class="mut" style="color:#9fb2d2;margin-top:22px">Akanov Aldiyar · 10 A · QCS</p></div>
+<svg viewBox="0 0 200 200" role="img" aria-label="Illustration of a basketball hoop with a ball"><circle cx="100" cy="100" r="96" fill="#12294f"/><use href="#hoop" width="200" height="200"/><use href="#ball" x="128" y="22" width="44" height="44"/></svg>
+</div></div>
+
+<section class="sec" id="about"><div class="w">
+<p class="num">01 — What we study</p>
+<h2>We measure <em>who wins.</em></h2>
+<p class="lead"><b>Research question:</b> How concentrated are titles at the FIBA Asia Cup, and did the 2017 inclusion of Oceania change competitive balance? We use competitive balance theory (Rottenberg, 1956) and the Herfindahl–Hirschman Index, where 1.00 means one team wins everything.</p>
+<svg class="court" viewBox="0 0 280 150" role="img" aria-label="Illustration of a basketball court"><use href="#court" width="280" height="150"/></svg>
+</div></section>
+
+<section class="sec" id="scale"><div class="w">
+<p class="num">02 — Scale of the picture</p>
+<h2>Many play, <em>few win.</em></h2>
+<div class="stats">
+<div class="stat"><b data-n="34">0</b><span>national teams have played</span><small>Through the 2025 edition</small></div>
+<div class="stat"><b data-n="6">0</b><span>different champions in 31 editions</span><small>China, Philippines, Iran, Australia, South Korea, Japan</small></div>
+<div class="stat"><b data-n="16">0</b><span>titles won by China</span><small>Between 1975 and 2015</small></div>
+</div>
+<p class="mut" style="margin-top:14px">Sources: <a href="https://en.wikipedia.org/wiki/FIBA_Asia_Cup" target="_blank" rel="noopener">Wikipedia, FIBA Asia Cup</a>; <a href="https://www.fiba.basketball/en/history/195-fiba-asia-cup" target="_blank" rel="noopener">FIBA history</a>.</p>
+</div></section>
+
+<section class="sec" id="findings"><div class="w">
+<p class="num">03 — Findings</p>
+<h2>What the data <em>shows.</em></h2>
+<div class="feat">
+<div><i>i.</i><h3>Cyclical dominance</h3><p>Concentration peaked in 1975–2005 (HHI 0.77) when China won 14 of 16 titles.</p></div>
+<div><i>ii.</i><h3>A West Asian window</h3><p>In 2007–2015 Iran won three titles and the HHI fell to 0.52.</p></div>
+<div><i>iii.</i><h3>Oceania did not spread success</h3><p>Australia won all three editions since 2017 and is 18–0 overall, so HHI reached 1.00.</p></div>
+<div><i>iv.</i><h3>Uneven games too</h3><p>Madarame (2017) found only 48% of Asian games were balanced, against 76% in Europe.</p></div>
+</div></div></section>
+
+<section class="sec" id="champions"><div class="w">
+<p class="num">04 — Champions</p>
+<h2>Every edition, <em>one tap.</em></h2>
+<p class="lead">Tap a tile for the host, the champion and, for recent finals, the score.</p>
+<div class="tl" id="tl"></div><div class="legend" id="legend"></div>
+<div class="detail" id="detail" aria-live="polite">Select a tournament.</div>
+<h3 style="font-size:26px;margin-bottom:6px">Concentration by era</h3>
+<p class="mut">Longer bar means one team dominates.</p>
+<div id="eras" style="margin:10px 0"></div><div id="bars"></div>
+<div class="detail" id="eradetail" aria-live="polite"></div>
+<div class="scroll"><table><thead><tr><th>Era</th><th>Editions</th><th>Champions</th><th>HHI</th><th>Leader’s share</th></tr></thead><tbody>
+<tr><td>1960–1973</td><td>7</td><td>3</td><td>0.43</td><td>57% (Philippines)</td></tr>
+<tr><td>1975–2005</td><td>16</td><td>3</td><td>0.77</td><td>88% (China)</td></tr>
+<tr><td>2007–2015</td><td>5</td><td>2</td><td>0.52</td><td>60% (Iran)</td></tr>
+<tr><td>2017–2025</td><td>3</td><td>1</td><td>1.00</td><td>100% (Australia)</td></tr>
+<tr><td><b>All 1960–2025</b></td><td>31</td><td>6</td><td>0.32</td><td>52% (China)</td></tr></tbody></table></div>
+<p class="mut" style="margin-top:12px">Caution: eras have only 3–16 editions, so a few repeat winners push the HHI up quickly.</p>
+</div></section>
+
+<section class="sec" id="courts"><div class="w">
+<p class="num">05 — Courts and host cities</p>
+<h2>Home soil <em>helps.</em></h2>
+<p class="lead">Hosts won 8 of 31 editions, and China won 5 of the 6 tournaments it hosted.</p>
+<div class="cards" id="hosts"></div>
+</div></section>
+
+<section class="sec" id="players"><div class="w">
+<p class="num">06 — Players</p>
+<h2>Names behind <em>the numbers.</em></h2>
+<p class="lead">Figures come from the all-time leaders and award lists in the sources. Portraits are generic illustrations, not photos.</p>
+<div class="cards" id="people"></div>
+<p class="mut" style="margin-top:14px">2025 award winners: Sina Vahedi (Iran), Jaylin Galloway and Jack McVeigh (Australia), Wang Junjie and Hu Jinqiu (China).</p>
+</div></section>
+
+<div class="cta"><div class="w"><h2>Method in <em>one line.</em></h2><p>Quantitative study of secondary data: champions of all 31 editions, grouped into four eras and measured with the HHI.</p><a class="btn" href="#top">Back to top ↑</a></div></div>
+
+<footer><div class="w"><b style="color:#fff">Sources</b><ul>
+<li>FIBA. (n.d.). FIBA Asia Cup: History. fiba.basketball/en/history/195-fiba-asia-cup</li>
+<li>Fort, R., &amp; Maxcy, J. (2003). Competitive balance in sports leagues: An introduction. Journal of Sports Economics, 4(2), 154–160.</li>
+<li>Humphreys, B. R. (2002). Alternative measures of competitive balance in sports leagues. Journal of Sports Economics, 3(2), 133–148.</li>
+<li>Madarame, H. (2017). Game-related statistics which discriminate between winning and losing teams in Asian and European men’s basketball championships. Asian Journal of Sports Medicine, 8(2), e42727. <a href="https://doi.org/10.5812/asjsm.42727" target="_blank" rel="noopener">doi</a></li>
+<li>Rottenberg, S. (1956). The baseball players’ labor market. Journal of Political Economy, 64(3), 242–258.</li>
+<li>Truyens, J., De Bosscher, V., &amp; Heyndels, B. (2016). Competitive balance in athletics. Managing Sport and Leisure, 21(1), 23–43. <a href="https://doi.org/10.1080/23750472.2016.1169213" target="_blank" rel="noopener">doi</a></li>
+<li>Wikipedia contributors. (2026). FIBA Asia Cup. en.wikipedia.org/wiki/FIBA_Asia_Cup (accessed 3 November 2026)</li>
+<li>Zheng, J., Oh, T., Dickson, G., Hedlund, D. P., Zhong, T., &amp; De Bosscher, V. (2024). Market share instability and market concentration: A sport/discipline-specific study of the Summer Olympic Games 1992–2020. SAGE Open, 14(2). <a href="https://doi.org/10.1177/21582440241244972" target="_blank" rel="noopener">doi</a></li></ul></div></footer>
+
+<script>
+var COL={CHN:'#c1272d',PHI:'#1f5fa8',IRI:'#2e8b57',AUS:'#c98a00',KOR:'#7b4fa3',JPN:'#6b7280'};
+var NM={CHN:'China',PHI:'Philippines',IRI:'Iran',AUS:'Australia',KOR:'South Korea',JPN:'Japan'};
+var CH=[[1960,'PHI','Manila'],[1963,'PHI','Taipei'],[1965,'JPN','Kuala Lumpur'],[1967,'PHI','Seoul'],[1969,'KOR','Bangkok'],[1971,'JPN','Tokyo'],[1973,'PHI','Manila'],[1975,'CHN','Bangkok'],[1977,'CHN','Kuala Lumpur'],[1979,'CHN','Nagoya'],[1981,'CHN','Kolkata'],[1983,'CHN','Hong Kong'],[1985,'PHI','Kuala Lumpur'],[1987,'CHN','Bangkok'],[1989,'CHN','Beijing'],[1991,'CHN','Kobe'],[1993,'CHN','Jakarta'],[1995,'CHN','Seoul'],[1997,'KOR','Riyadh'],[1999,'CHN','Fukuoka'],[2001,'CHN','Shanghai'],[2003,'CHN','Harbin'],[2005,'CHN','Doha'],[2007,'IRI','Tokushima'],[2009,'IRI','Tianjin'],[2011,'CHN','Wuhan'],[2013,'IRI','Manila'],[2015,'CHN','Changsha'],[2017,'AUS','Zouk Mikael'],[2022,'AUS','Jakarta'],[2025,'AUS','Jeddah']];
+var SC={2017:'beat Iran 79–56',2022:'beat Lebanon 75–73',2025:'beat China 90–89',2015:'beat the Philippines 78–67',2013:'beat the Philippines 85–71',2011:'beat Jordan 70–69'};
+var ERAS=[['1960–1973',0.43,'PHI',7,3,'57%',2.33,'Philippines won 4 of 7; Japan and South Korea took the rest.'],['1975–2005',0.77,'CHN',16,3,'88%',1.29,'China won 14 of 16. Only the Philippines (1985) and South Korea (1997) interrupted.'],['2007–2015',0.52,'IRI',5,2,'60%',1.92,'Iran won 3 of 5 and China 2.'],['2017–2025',1.00,'AUS',3,1,'100%',1.00,'Australia won all three editions after Oceania joined.'],['All',0.32,'CHN',31,6,'52%',3.13,'Six champions in 31 editions; China holds 16 titles.']];
+var HOSTS=[['Jeddah','Saudi Arabia · 2025','Australia won 90–89 against China.'],['Jakarta','Indonesia · 2022','Australia won 75–73 against Lebanon.'],['Zouk Mikael','Lebanon · 2017','Australia won 79–56 against Iran.'],['Changsha','China · 2015','Host China won 78–67.'],['Manila','Philippines · 2013','Iran won; the hosts reached the final.'],['Wuhan','China · 2011','Host China won 70–69 against Jordan.']];
+var PEOPLE=[['Fadi El Khatib','Lebanon','CHN','Top scorer in Asia Cup history: 860 points in 39 games (22.1 per game).'],['Hamed Haddadi','Iran','IRI','855 points in 60 games; led the tournament in rebounding in 2009, 2013 and 2017.'],['Yi Jianlian','China','CHN','551 points in 36 games, 15.3 per game.'],['Wael Arakji','Lebanon','KOR','MVP of the 2022 tournament; 21.2 points per game across 2017 and 2022.'],['Michael Madanly','Syria','JPN','Highest career scoring average: 28.5 per game, and 33.1 in 2007.'],['Jack McVeigh','Australia','AUS','2025 award winner as Australia won its third straight title.']];
+var $=function(i){return document.getElementById(i)};
+CH.forEach(function(c){var b=document.createElement('button');b.className='tile';b.style.background=COL[c[1]];b.setAttribute('aria-pressed','false');b.innerHTML=c[0]+'<small>'+c[1]+'</small>';
+b.onclick=function(){document.querySelectorAll('.tile').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');$('detail').innerHTML='<b>'+c[0]+'</b> in '+c[2]+': <b>'+NM[c[1]]+'</b> won'+(SC[c[0]]?' and '+SC[c[0]]:'')+'.'};$('tl').appendChild(b)});
+for(var k in NM){$('legend').innerHTML+='<span><i style="background:'+COL[k]+'"></i>'+NM[k]+'</span>'}
+function era(i){var e=ERAS[i];document.querySelectorAll('.era').forEach(function(b,j){b.setAttribute('aria-pressed',j==i)});$('eradetail').innerHTML='<b>'+e[0]+'</b>: '+e[3]+' editions, '+e[4]+' champions, HHI '+e[1].toFixed(2)+', leader’s share '+e[5]+', effective champions '+e[6].toFixed(2)+'. '+e[7]}
+ERAS.forEach(function(e,i){var b=document.createElement('button');b.className='era';b.textContent=e[0];b.setAttribute('aria-pressed','false');b.onclick=function(){era(i)};$('eras').appendChild(b);
+$('bars').innerHTML+='<div class="bar"><b>'+e[0]+'</b><div><span data-w="'+e[1]*100+'" style="background:'+(i==4?'#8b95a5':COL[e[2]])+'"></span></div><em>'+e[1].toFixed(2)+'</em></div>'});
+era(1);
+HOSTS.forEach(function(h){$('hosts').innerHTML+='<div class="card"><h3>'+h[0]+'</h3><div class="mut">'+h[1]+'</div><p>'+h[2]+'</p></div>'});
+PEOPLE.forEach(function(p){$('people').innerHTML+='<div class="card"><svg class="av" viewBox="0 0 60 60" style="color:'+COL[p[2]]+'" role="img" aria-label="Generic player illustration"><use href="#av" width="60" height="60"/></svg><h3>'+p[0]+'</h3><div class="mut">'+p[1]+'</div><p>'+p[3]+'</p></div>'});
+// reveal: counters and bars once, on first view
+var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function count(el){var n=+el.dataset.n;if(RM){el.textContent=n;return}var t0=null;(function f(t){t0=t0||t;var p=Math.min((t-t0)/1200,1);el.textContent=Math.round(n*p);if(p<1)requestAnimationFrame(f)})(performance.now())}
+function bars(){document.querySelectorAll('.bar span').forEach(function(s){s.style.width=s.dataset.w+'%'})}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(e.target.dataset.n)count(e.target);else bars();io.unobserve(e.target)}})});
+document.querySelectorAll('[data-n]').forEach(function(x){io.observe(x)});io.observe($('bars'))}else{document.querySelectorAll('[data-n]').forEach(function(x){x.textContent=x.dataset.n});bars()}
+</script>
+</body>
+</html>
